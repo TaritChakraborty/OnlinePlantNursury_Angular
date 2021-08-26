@@ -1,0 +1,32 @@
+<!--..............................Navigation bar.................................................-->
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+    <img src="..\assets\icon.png" class="rounded-circle" width="40" height="40" />
+    <a href="#"> <b class="logo-title">NASCENT</b> </a>
+
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
+        <!--.....................Add product here.......................-->
+
+        <div class="navbar-nav ml-auto">
+            <div ngbDropdown class="nav-item dropdown">
+                <a data-toggle="dropdown" class="nav-link dropdown-toggle user-action" ngbDropdownToggle>
+                    <img src="..\assets\profile.png" class="rounded-circle" width="40" height="40"
+                        style="margin-right:10px;"></a>
+                <div ngbDropdownMenu class="dropdown-menu">
+                    <a class="dropdown-item" ngbDropdownItem (click)="profileRedirect()"><i class="fa fa-user-o"></i>
+                        Profile</a>
+                    <!-- <a class="dropdown-item" ngbDropdownItem (click) = "order()"><i class="fa fa-shopping-cart"></i> My Orders</a> -->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" ngbDropdownItem (click)="logout()"><i class="material-icons">&#xE8AC;</i>
+                        Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <a routerLink="/products/seeds" class="nav-item nav-link">Products</a>
+            <a routerLink="/cart" class="nav-item nav-link">Cart</a>
+
+        </div>
+
+    </div>
+</nav>

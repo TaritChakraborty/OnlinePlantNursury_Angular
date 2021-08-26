@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Customer Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body style="font-family: 'Karla', sans-serif; background: url('../../assets/background.jpg'); background-size: cover; height: 100%;
+width: 100%;">
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <img src="..\assets\welcome1.gif" class="login-card-img">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <div class="brand-wrapper" style="margin-bottom: 15px;">
+              <img img src="..\assets\icon.png" class="rounded-circle" width="110" height="110">
+              <label class="switch float-right">
+                <input type="button" (click)="onAdminSubmit()">
+                <!--(click) ="onAdminSubmit()-->
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <p class="login-card-description">Sign into your account</p>
+            <div class="warning" *ngIf="isShown">Incorrect Credentials</div>
+            <div class="warning" *ngIf="isAdminShown">Incorrect AdminCredentials</div>
+            <!--.....................................Login form code start........................................-->
+            <!-- ///////////////////////ADMIN LOGIN////////////////////////////////////////////////-->
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <input type="text" formControlName="username" class="form-control" placeholder="Username" required>
+
+                <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+              </div>
+              <!-- Comment THIS -> <input type="button" class="btn btn-block login-btn mb-4" value="Login" [disabled]="!loginForm.valid"> -->
+              <button type="submit" class="btn btn-block login-btn mb-4" [disabled]="!loginForm.valid">Login</button>
+            </form>
+            <!--.....................................Login form code end..........................................-->
+
+            <p class="login-card-footer-text">Don't have an account?
+              <a routerLink="/add-customer" style="color: #097969;">Register here</a>
+            </p> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

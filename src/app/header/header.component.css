@@ -1,0 +1,82 @@
+.rounded-circle{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo-title{
+	font-family: 'Lucida Console', 'Courier New'; 
+	font-size: 24px;
+	color: #097969;
+	margin-left:9px;
+}
+.caret{
+	font-size: 18px;
+	color: #097969;
+}
+.logo-title:hover{
+	text-decoration: none;
+}
+.navbar {
+	padding-left: 20px;
+	padding-right: 20px;
+	border-bottom: 1px solid #d6d6d6;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -7px 0;
+	float: left;
+}
+
+.navbar .navbar-brand {
+	color: #555;
+	background: #99ff99;
+	padding-left: 0;
+	padding-right: 50px;
+	font-family: 'Merienda One', sans-serif;
+}
+.navbar .navbar-brand i {
+	font-size: 20px;
+	margin-right: 5px;
+}
+.navbar .nav-item i {
+	font-size: 18px;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .nav-item.open > a {
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar .dropdown-menu a {
+	color: #777;
+	padding: 8px 20px;
+	line-height: normal;
+}
+.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:active {
+	color: #333;
+}	
+.navbar .dropdown-item .material-icons {
+	font-size: 21px;
+	line-height: 15px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+	background: transparent !important;
+}
+
+@media screen and (max-width: 900px) {
+	.col { width: 50%; }
+ }
+ @media screen and (max-width: 600px) {
+	.col { width: 100%; }
+ }

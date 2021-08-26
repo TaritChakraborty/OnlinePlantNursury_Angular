@@ -1,0 +1,29 @@
+<div class="bg-grey vh-75 d-flex justify-content-top align-items-center">
+  <div class="container d-flex justify-content-center">
+    <div class="cards">
+      <div *ngFor="let planter of planters" class="card p-2">
+        <div class="p-info px-3 py-3">
+          <div>
+            <h5 class="mb-0">{{planter.planterCapacity}}</h5> <span>Blooms on {{planter.planterheight}}</span>
+          </div>
+          <div class="p-price d-flex flex-row"> <span>$</span>
+            <h1>{{planter.planterCost}}</h1>
+          </div>
+          <div class="heart"> <i class="bx bx-heart"></i> </div>
+        </div>
+        <div class="text-center p-image"> <img [src]="planter.planterImageUrl"> </div>
+        <div class="p-about">
+          <p>Comes in {{planter.planterColor}} with {{planter.drinageHoles}} Drainage Holes<br>
+
+          </p>
+        </div>
+        <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-danger w-100">View</button>
+          <a>
+            <button class="btn btn-outline-danger w-100" (click)="addPlanterToCart(planter)">
+              Add to Cart
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

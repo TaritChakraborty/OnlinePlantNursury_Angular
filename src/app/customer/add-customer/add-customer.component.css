@@ -1,0 +1,118 @@
+
+.container{
+    background-image: url("../../../assets/back4.jpg");
+    background-size: cover;  
+}
+img{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-control {
+	height: 36px;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+	color: #969fa4;
+}
+.form-control:focus {
+	border-color: #5cb85c;
+}
+.form-control, .btn {        
+	border-radius: 5px;
+}
+.signup-form {
+	width: 600px;
+	margin: 0 auto;
+	margin-right: 40px;
+	padding: 15px 0;
+  	font-size: 17px;
+	
+}
+.signup-form h2 {
+	color: #636363;
+	margin: 0 0 15px;
+	position: relative;
+	text-align: center;
+}
+.signup-form h2:before, .signup-form h2:after {
+	content: "";
+	height: 2px;
+	width: 30%;
+	background: #3B3B3B;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}	
+.signup-form h2:before {
+	left: 0;
+}
+.signup-form h2:after {
+	right: 0;
+}
+.signup-form .hint-text {
+	color: #3B3B3B;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.signup-form form {
+	color: #3B3B3B;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	background-image: linear-gradient(to right, #FFE5FF, #dfffdf);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 20px;
+}
+.signup-form .form-group {
+	margin-bottom: 15px;
+}
+.signup-form input[type="checkbox"] {
+	margin-top: 3px;
+}
+.signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;		
+	min-width: 60px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	outline: none !important;
+}
+.signup-form .row div:first-child {
+	padding-right: 20px;
+}
+.signup-form .row div:last-child {
+	padding-left: 20px;
+}    	
+.signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: #006D5B;
+	text-decoration: none;
+}	
+.signup-form form a:hover {
+	text-decoration: underline;
+}  
+.signup-form .hint-text {
+	color: #999;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/*..............................Error message..............................*/
+.warning{
+	border-radius: 3px;
+	background: #FA5F55;
+	color: #8B0000;
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+.badge {
+	position: absolute;
+	top: -10px;
+	right: 8px;
+	padding: 3px 5px;
+	border-radius: 5px;
+	background: #8B0000;
+	color: white;
+  }

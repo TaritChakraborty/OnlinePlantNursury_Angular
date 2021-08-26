@@ -1,0 +1,150 @@
+<main class="page">
+  <section class="shopping-cart dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2>Shopping Cart</h2>
+        <!-- <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+          urna, dignissim nec auctor in, mattis vitae leo.
+        </p> -->
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="items">
+              <!-- ---------For Seed ------------------------>
+              <div *ngFor="let seedItem of seedItems" class="product">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid mx-auto d-block image" src="{{seedItem.seedImageUrl}}" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-md-5 product-name">
+                          <div class="product-name">
+                            <a href="#">{{seedItem.commonName}}</a>
+                            <div class="product-info">
+                              <div>
+                                Bloom Time: <span class="value">{{seedItem.bloomTime}}</span>
+                              </div>
+                              <div>Type of Seeds: <span class="value">{{seedItem.typeOfSeeds}}</span></div>
+                              <div>Watering: <span class="value">{{seedItem.watering}}</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 quantity">
+                          <label for="quantity">Quantity:</label>
+                          <input id="quantity" type="number" class="form-control quantity-input"
+                            (keyup)="updateSeedSum($event)" [value]="seedItemQuantity" />
+                          <p></p>
+                        </div>
+                        <div class="col-md-3 price">
+                          <span>{{seedItem.seedsCost}}</span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!------------------For Plants ----------------->
+              <div *ngFor="let plantItem of plantItems" class="product">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid mx-auto d-block image" src="{{plantItem.plantImageUrl}}" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-md-5 product-name">
+                          <div class="product-name">
+                            <a href="#">{{plantItem.commonName}}</a>
+                            <div class="product-info">
+                              <div>
+                                Blooom Time: <span class="value">{{plantItem.bloomTime}}</span>
+                              </div>
+                              <div>Medical Use: <span class="value">{{plantItem.medicinalOrCulinaryUse}}GB</span></div>
+                              <div>Type of Plant: <span class="value">{{plantItem.typeOfPlant}}</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 quantity">
+                          <label for="quantity">Quantity:</label>
+                          <input id="quantity" type="number" class="form-control quantity-input"
+                            (keyup)="updatePlantSum($event)" [value]="plantItemQuantity" />
+                          <p></p>
+                        </div>
+                        <div class="col-md-3 price">
+                          <span>{{plantItem.plantCost}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!----------------For Planter------------------->
+              <div *ngFor="let planterItem of planterItems" class="product">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid mx-auto d-block image" src="{{planterItem.planterImageUrl}}" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-md-5 product-name">
+                          <div class="product-name">
+                            <a href="#">Planter</a>
+                            <div class="product-info">
+                              <div>
+                                Height: <span class="value">{{planterItem.planterheight}}</span>
+                              </div>
+                              <div>Capacity: <span class="value">{{planterItem.planterCapacity}}</span></div>
+                              <div>Drainage Holes: <span class="value">{{planterItem.drinageHoles}}</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 quantity">
+                          <label for="quantity">Quantity:</label>
+                          <input id="quantity" type="number" class="form-control quantity-input"
+                            (ngModelChange)="updatePlanterSum($event)" [value]="planterItemQuantity" />
+                          <p></p>
+                        </div>
+                        <div class="col-md-3 price">
+                          <span>{{planterItem.planterCost}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="summary">
+              <h3>Summary</h3>
+              <div class="summary-item">
+                <span class="text">Subtotal</span><span class="price">{{totalPrice}}</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Discount</span><span class="price">$0</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Shipping</span><span class="price">$0</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Total</span><span class="price">{{totalPrice}}</span>
+              </div>
+              <a routerLink="/order">
+                <button *ngIf="totalPrice !=0" type="button" class="btn btn-primary btn-lg btn-block"
+                  (click)="onClickCheckout()">
+                  Checkout
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
