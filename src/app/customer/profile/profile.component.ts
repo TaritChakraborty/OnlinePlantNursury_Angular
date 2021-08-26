@@ -97,7 +97,8 @@ export class ProfileComponent implements OnInit {
   }
   toggleview() {
     this.isView = !this.isView;
-    this._cservice.getLastOrder().subscribe(data => { this.lastorder = data; }, error => console.log(error));
+    this._cservice.getLastOrder().subscribe(data => { this.lastorder = data; 
+                                                      console.log(data); }, error => console.log(error));
   }
 
   activate1() {

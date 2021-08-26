@@ -29,9 +29,7 @@ export class OrderComponent implements OnInit {
         (response: Customer) => {
           this.logCustomer = response;
         },
-        (error: HttpErrorResponse) => {
-          alert(error.message);
-        }
+        (error: HttpErrorResponse) => { console.log(error); }
       )
 
 

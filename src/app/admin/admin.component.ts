@@ -20,7 +20,6 @@ export class AdminComponent implements OnInit {
   isPlanter: boolean = false;
   isPlant: boolean = false;
   isSeed: boolean = false;
-
   ifAddPlant: boolean = false;
 
   admin = {} as Admin;
@@ -189,15 +188,15 @@ export class AdminComponent implements OnInit {
   });
   planterObj = {} as Planter;
   addPlanter() {
-    this.planterObj.planterheight = this.planterForm.controls.plant1.value;
-    this.planterObj.planterCapacity = this.planterForm.controls.plant2.value;
-    this.planterObj.drinageHoles = this.planterForm.controls.plant3.value;
-    this.planterObj.planterColor = this.planterForm.controls.plant4.value;
+    this.planterObj.planterheight = this.planterForm.controls.planter1.value;
+    this.planterObj.planterCapacity = this.planterForm.controls.planter2.value;
+    this.planterObj.drinageHoles = this.planterForm.controls.planter3.value;
+    this.planterObj.planterColor = this.planterForm.controls.planter4.value;
 
-    this.planterObj.planterShape = this.planterForm.controls.plant5.value;
-    this.planterObj.planterStock = this.planterForm.controls.plant6.value;
-    this.planterObj.planterCost = this.planterForm.controls.plant7.value;
-    this.planterObj.planterImageUrl = this.planterForm.controls.plant8.value;
+    this.planterObj.planterShape = this.planterForm.controls.planter5.value;
+    this.planterObj.planterStock = this.planterForm.controls.planter6.value;
+    this.planterObj.planterCost = this.planterForm.controls.planter7.value;
+    this.planterObj.planterImageUrl = this.planterForm.controls.planter8.value;
 
     this._adminservice.createPlanter(this.planterObj)
       .subscribe(data => { console.log(this.planterObj); window.location.reload(); },

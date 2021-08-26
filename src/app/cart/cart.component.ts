@@ -61,14 +61,12 @@ export class CartComponent implements OnInit {
         .reduce((a, b) => {
           return a + b;
         });
-      //  this.seedTotal = this.seedSum * this.seedItems.length;
     }
     else
       this.seedSum = 0
 
     this.seedItemQuantity = event.target.value
     this.seedTotal = this.seedSum * this.seedItemQuantity;
-    //this.seedItemQuantity = event.target.value;
     this.updateTotalPrice();
   }
   updatePlantSum(event): void {
@@ -78,7 +76,6 @@ export class CartComponent implements OnInit {
         .reduce((a, b) => {
           return a + b;
         });
-      //  this.plantTotal = this.plantSum * this.plantItems.length;
     }
     else
       this.plantSum = 0
@@ -94,8 +91,6 @@ export class CartComponent implements OnInit {
         .reduce((a, b) => {
           return a + b;
         });
-
-      //  this.planterTotal = this.planterSum * this.planterItems.length;
     }
     else
       this.planterSum = 0
@@ -116,15 +111,11 @@ export class CartComponent implements OnInit {
     this.order.planterQuantity = this.planterItemQuantity;
     this.order.seedQuantity = this.seedItemQuantity;
     this.order.totalCost = this.totalPrice;
-    // this.order.bookingOrderId = 1;
-    // this.order.customer = 5;
-    // this.order.orderDate='';
     this.order.plant = this.plantItems;
     this.order.seed = this.seedItems;
+    console.log("on checkout cart component", this.order.seed);
     this.order.planters = this.planterItems;
-    this.order.quantity = 4;
-    // this.order.transactionMode = "";
-
+    this.order.quantity = this.order.plantQuantity + this.order.planterQuantity + this.order.seedQuantity; //changed
     this.cartService.onClickCheckout(this.order);
   }
 

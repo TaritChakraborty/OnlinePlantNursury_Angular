@@ -38,3 +38,16 @@ border-bottom-color: #007bff;
     border-radius:0px;
 }
 
+#head{
+    background: #050A30;
+    color: white;
+    font-size: 22px;
+    width: 720px;
+    height: 45px;
+    margin: 30px 0px 30px 320px;
+    border-radius: 5px;
+    text-align: center;
+}
+#page-content{
+    margin-left: 120px;
+}

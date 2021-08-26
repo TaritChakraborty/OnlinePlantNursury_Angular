@@ -6,24 +6,23 @@
                     <div>
                         <h5 class="mb-0">{{plant.commonName}}</h5> <span>Blooms on {{plant.bloomTime}}</span>
                     </div>
-                    <div class="p-price d-flex flex-row"> <span>$</span>
+                    <div class="p-price d-flex flex-row"> <span><i class="fa fa-inr" aria-hidden="true"></i></span>
                         <h1>{{plant.plantCost}}</h1>
                     </div>
                     <div class="heart"> <i class="bx bx-heart"></i> </div>
                 </div>
                 <div class="text-center p-image"> <img [src]="plant.plantImageUrl"> </div>
                 <div class="p-about">
-                    <p>{{plant.plantDescription}}, difficulty level is {{plant.difficultyLevel}}<br>
+                    <p style="font-size: 12px;">{{plant.plantDescription}}, difficulty level is {{plant.difficultyLevel}}<br>
                         This Plant is very useful in {{plant.medicinalOrCulinaryUse}} and keep it at temperature of
                         {{plant.temparature}}
                     </p>
-                   
+                    <h6>Stock left: {{plant.plantsStock}}</h6>
                 </div>
-                <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-danger w-100">View</button>
-                    <a>
+                <div class="buttons d-flex flex-row gap-3 px-3">
                         <button class="btn btn-outline-danger w-100" (click)="addPlantToCart(plant)">
                             Add to Cart
-                        </button></a>
+                        </button>
                 </div>
             </div>
 

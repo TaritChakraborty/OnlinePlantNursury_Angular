@@ -6,22 +6,21 @@
           <div>
             <h5 class="mb-0">{{planter.planterCapacity}}</h5> <span>Blooms on {{planter.planterheight}}</span>
           </div>
-          <div class="p-price d-flex flex-row"> <span>$</span>
+          <div class="p-price d-flex flex-row"> <span><i class="fa fa-inr" aria-hidden="true"></i></span>
             <h1>{{planter.planterCost}}</h1>
           </div>
           <div class="heart"> <i class="bx bx-heart"></i> </div>
         </div>
         <div class="text-center p-image"> <img [src]="planter.planterImageUrl"> </div>
         <div class="p-about">
-          <p>Comes in {{planter.planterColor}} with {{planter.drinageHoles}} Drainage Holes<br>
-
+          <p style="font-size: 12px;">Comes in {{planter.planterColor}} with {{planter.drinageHoles}} Drainage Holes<br>
           </p>
+          <h6>Stock left: {{planter.planterStock}}</h6>
         </div>
-        <div class="buttons d-flex flex-row gap-3 px-3"> <button class="btn btn-danger w-100">View</button>
-          <a>
+        <div class="buttons d-flex flex-row gap-3 px-3"> 
             <button class="btn btn-outline-danger w-100" (click)="addPlanterToCart(planter)">
               Add to Cart
-            </button></a>
+            </button>
         </div>
       </div>
     </div>

@@ -19,11 +19,12 @@ export class OrderService {
   setOrder(order: Order): void {
 
     this.order = order;
-    console.log("order Service" + this.order);
+    console.log("order Service",this.order);
   }
 
   public addOrder(order: Order): Observable<Order> {
     console.log("orderServe", order);
+
     return this.http.post<Order>(`${this.apiServerUrl}/order/add`, order);
   }
 }

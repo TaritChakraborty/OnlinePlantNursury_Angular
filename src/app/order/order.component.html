@@ -1,49 +1,44 @@
-<h2>Checkout</h2>
-<div class="row">
+<div class="row" id="checkout">
   <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
-
+    <div class="container" id="block">
         <div class="row">
           <div class="col-50">
-            <h3>Billing Address</h3>
+            <h5>Shipping Address</h5> <hr>
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
             <input type="text" id="fname" name="firstname" placeholder="John M. Doe" [value]="logCustomer.customerName">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com"
-              [value]="logCustomer.customerEmail">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"
-              [value]="logCustomer.address.houseNo">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York" [value]="logCustomer.address.city">
+            <input type="text" id="email" name="email" [value]="logCustomer.customerEmail">
 
+            <label>Address</label>  <hr>
+            <label for="adr"><i class="fa fa-address-card-o"></i> House Number</label>
+            <input type="text" id="adr" name="address" [value]="logCustomer.address.houseNo">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city"[value]="logCustomer.address.city">
             <div class="row">
               <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY" [value]="logCustomer.address.state">
+                <label for="state"><i class="fa fa-area-chart"></i> State</label>
+                <input type="text" [value]="logCustomer.address.state" style="width: 120px;">
               </div>
               <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001" [value]="logCustomer.address.pincode">
+                <label for="zip"><i class="fa fa-map-marker"></i> Pin Code</label>
+                <input type="text" [value]="logCustomer.address.pincode" style="width: 120px;">
               </div>
             </div>
           </div>
 
           <div class="col-50">
-            <h3>Payment</h3>
-
+            <h5>Payment</h5> <hr>
             <label *ngFor="let item of paymentOption">
-
-              <input type="radio" [(ngModel)]="radioSelected" name="list_name" value="{{item}}"
-                (change)="onItemChange(item)" />
+              
+              <input type="radio" [(ngModel)]="radioSelected" class="form-check-input" name="list_name" value="{{item}}"
+                (change)="onItemChange(item)" /> <i class="fa fa-google-wallet" style="color:#0C2D48"></i>
               {{item}}
               <div id="paypal-marks-container"></div>
             </label>
 
 
 
-            <div *ngIf="radioSel === 'Card'">
+            <div *ngIf="radioSel === 'Card'" id="card_details">
               <label for="fname">Accepted Cards</label>
               <div class="icon-container">
                 <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -52,15 +47,15 @@
                 <i class="fa fa-cc-discover" style="color:orange;"></i>
               </div>
               <label for="cname">Name on Card</label>
-              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <input type="text" id="cname" name="cardname">
               <label for="ccnum">Credit card number</label>
-              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <input type="text" id="ccnum" name="cardnumber">
               <label for="expmonth">Exp Month</label>
-              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              <input type="text" id="expmonth" name="expmonth">
               <div class="row">
                 <div class="col-50">
                   <label for="expyear">Exp Year</label>
-                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                  <input type="text" id="expyear" name="expyear">
                 </div>
                 <div class="col-50">
                   <label for="cvv">CVV</label>
@@ -70,19 +65,14 @@
             </div>
           </div>
         </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
         <input type="submit" value="Continue to checkout" class="btn" (click)="onConfirmOrder()">
-      </form>
     </div>
   </div>
   <div class="col-25">
-    <div class="container">
-      <h4>From Cart <span class="price" style="color:black"></span></h4>
-
-
-      <p>Total <span class="price" style="color:black"><b id="pri-val">{{order.totalCost}}</b></span></p>
+    <div class="container" id="block">
+      <h5>Review Order <span class="price" style="color:black"></span></h5> <hr>
+      <p>Total <span class="price" style="color:black">
+        <b id="pri-val"><i class="fa fa-inr" aria-hidden="true"></i> &nbsp; {{order.totalCost}}</b></span></p>
     </div>
   </div>
 </div>

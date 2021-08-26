@@ -36,6 +36,7 @@ export class CartService {
   /*.......Seed............... */
   addSeedToCart(seed: Seed) {
     this.seedItems.push(seed);
+    console.log("cart service: ", this.seedItems)
   }
   getSeedItems() {
     return this.seedItems;
@@ -86,6 +87,7 @@ export class CartService {
     this.order.totalCost = order.totalCost;
     this.order.planters = order.planters
     this.order.seed = order.seed;
+    console.log("on checkout cart service", this.order.seed);
     this.order.plant = order.plant;
     console.log("cart Service" + this.order.plantQuantity);
     this.orderService.setOrder(this.order);

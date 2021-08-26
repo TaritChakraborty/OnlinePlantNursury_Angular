@@ -4,8 +4,9 @@
 .logo-title{
 	font-family: 'Lucida Console', 'Courier New'; 
 	font-size: 24px;
-	color: #097969;
+	color: #0C2D48;
 	margin-left:9px;
+	text-shadow: 0 0 3px #B1D4E0, 0 0 5px #0C2D48;
 }
 .caret{
 	font-size: 18px;
@@ -47,9 +48,7 @@
 	font-size: 16px;
 	min-width: 22px;
 }
-.navbar .nav-item.open > a {
-	background: none !important;
-}
+
 .navbar .dropdown-menu {
 	border-radius: 1px;
 	border-color: #e5e5e5;
@@ -70,13 +69,13 @@
 	margin-top: -2px;
 }
 
-.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
-	background: transparent !important;
-}
-
 @media screen and (max-width: 900px) {
 	.col { width: 50%; }
  }
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 	.col { width: 100%; }
- }
+}
+
+.nav-item:hover{
+	color: #581845;
+}

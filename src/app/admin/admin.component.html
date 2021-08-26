@@ -24,7 +24,7 @@
 		<!-- Collection of nav links, forms, and other content for toggling -->
 		<div id="navbarCollapse" class="collapse navbar-collapse">
 			<div class="navbar-nav float-right">
-				<a class="nav-item nav-link" (click)="customer()">Customer</a>
+				<a class="nav-item nav-link" (click)="customer()"><i class="fa fa-user"></i> Customer</a>
 				<a class="nav-item nav-link" (click)="plant()">Plant</a>
 				<a class="nav-item nav-link" (click)="planter()">Planter</a>
 				<a class="nav-item nav-link" (click)="seed()">Seed</a>
@@ -163,8 +163,7 @@
 							<td>{{pobj.plantDescription}}</td>
 							<td><input type="number" class="form-control frm" value={{pobj.plantsStock}}></td>
 							<td><input type="number" class="form-control frm" value={{pobj.plantCost}}></td>
-							<td>
-								<a><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a> &nbsp;
+							<td>								
 								<a (click)="deletePlant(pobj.plantId)" class="delete"><i class="material-icons"
 										data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
@@ -270,9 +269,7 @@
 							<td>{{plobj.planterShape}}</td>
 							<td><input type="number" class="form-control frm" value={{plobj.planterStock}}></td>
 							<td><input type="number" class="form-control frm" value={{plobj.planterCost}}></td>
-							<td>
-								<a class="edit"><i class="material-icons" data-toggle="tooltip"
-										title="Edit">&#xE254;</i></a> &nbsp;
+							<td>								
 								<a (click)="deletePlanter(plobj.planterId)" class="delete" data-toggle="modal"><i
 										class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
@@ -370,8 +367,6 @@
 							<td><input type="number" class="form-control frm" value={{sobj.seedsStock}}></td>
 							<td><input type="number" class="form-control frm" value={{sobj.seedsCost}}></td>
 							<td>
-								<a class="edit"><i class="material-icons" data-toggle="tooltip"
-										title="Edit">&#xE254;</i></a> &nbsp;
 								<a (click)="deleteSeed(sobj.seedId)" class="delete" data-toggle="modal"><i
 										class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
