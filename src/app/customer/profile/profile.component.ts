@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Address } from 'src/app/address';
@@ -134,9 +134,9 @@ export class ProfileComponent implements OnInit {
   }
 
   /*......................................Update password.................................................*/
-  change_password = new FormControl
+  change_password = new UntypedFormControl
     ('');
-  confirm_password = new FormControl('');
+  confirm_password = new UntypedFormControl('');
   isDialogShown: boolean = false;
   updatePassword() {
     if (this.change_password.value == this.confirm_password.value) {

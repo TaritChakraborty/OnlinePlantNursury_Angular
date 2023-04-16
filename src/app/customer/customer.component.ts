@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Admin } from '../admin';
 import { AdminService } from '../admin/admin.service';
@@ -28,9 +28,9 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
+  loginForm = new UntypedFormGroup({
+    username: new UntypedFormControl(''),
+    password: new UntypedFormControl(''),
   });
 
   onSubmit() {

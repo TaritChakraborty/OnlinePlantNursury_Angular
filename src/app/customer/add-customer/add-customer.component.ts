@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Address } from 'src/app/address';
 import { Customer } from 'src/app/customer';
@@ -23,12 +23,12 @@ export class AddCustomerComponent implements OnInit {
     this.submitted = false;
   }
 
-  customerForm = new FormGroup({
-    first: new FormControl(''), middle: new FormControl(''), last: new FormControl(''),
-    email: new FormControl(''), username: new FormControl(''),
-    password: new FormControl(''), confirm: new FormControl(''),
-    house: new FormControl(''), colony: new FormControl(''), city: new FormControl(''),
-    state: new FormControl(''), pin: new FormControl('')
+  customerForm = new UntypedFormGroup({
+    first: new UntypedFormControl(''), middle: new UntypedFormControl(''), last: new UntypedFormControl(''),
+    email: new UntypedFormControl(''), username: new UntypedFormControl(''),
+    password: new UntypedFormControl(''), confirm: new UntypedFormControl(''),
+    house: new UntypedFormControl(''), colony: new UntypedFormControl(''), city: new UntypedFormControl(''),
+    state: new UntypedFormControl(''), pin: new UntypedFormControl('')
   });
 
   onSubmit() {

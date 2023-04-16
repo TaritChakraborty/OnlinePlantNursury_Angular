@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Admin } from '../admin';
 import { Customer } from '../customer';
@@ -108,10 +108,10 @@ export class AdminComponent implements OnInit {
     this.plantForm.reset();
   }
 
-  plantForm = new FormGroup({
-    plant1: new FormControl(''), plant2: new FormControl(''), plant3: new FormControl(''), plant4: new FormControl(''),
-    plant5: new FormControl(''), plant6: new FormControl(''), plant7: new FormControl(''), plant8: new FormControl(''),
-    plant9: new FormControl(''), plant10: new FormControl(''), plant11: new FormControl(''), plant12: new FormControl('')
+  plantForm = new UntypedFormGroup({
+    plant1: new UntypedFormControl(''), plant2: new UntypedFormControl(''), plant3: new UntypedFormControl(''), plant4: new UntypedFormControl(''),
+    plant5: new UntypedFormControl(''), plant6: new UntypedFormControl(''), plant7: new UntypedFormControl(''), plant8: new UntypedFormControl(''),
+    plant9: new UntypedFormControl(''), plant10: new UntypedFormControl(''), plant11: new UntypedFormControl(''), plant12: new UntypedFormControl('')
   });
 
   plantObj = {} as Plant;
@@ -181,10 +181,10 @@ export class AdminComponent implements OnInit {
       this.ifAddPlanter = false;
     }
   }
-  planterForm = new FormGroup({
-    planter1: new FormControl(''), planter2: new FormControl(''), planter3: new FormControl(''),
-    planter4: new FormControl(''), planter5: new FormControl(''), planter6: new FormControl(''),
-    planter7: new FormControl(''), planter8: new FormControl('')
+  planterForm = new UntypedFormGroup({
+    planter1: new UntypedFormControl(''), planter2: new UntypedFormControl(''), planter3: new UntypedFormControl(''),
+    planter4: new UntypedFormControl(''), planter5: new UntypedFormControl(''), planter6: new UntypedFormControl(''),
+    planter7: new UntypedFormControl(''), planter8: new UntypedFormControl('')
   });
   planterObj = {} as Planter;
   addPlanter() {
@@ -236,11 +236,11 @@ export class AdminComponent implements OnInit {
       this.ifAddSeed = false;
     }
   }
-  seedForm = new FormGroup({
-    seed1: new FormControl(''), seed2: new FormControl(''), seed3: new FormControl(''),
-    seed4: new FormControl(''), seed5: new FormControl(''), seed6: new FormControl(''),
-    seed7: new FormControl(''), seed8: new FormControl(''), seed9: new FormControl(''),
-    seed10: new FormControl(''), seed11: new FormControl('')
+  seedForm = new UntypedFormGroup({
+    seed1: new UntypedFormControl(''), seed2: new UntypedFormControl(''), seed3: new UntypedFormControl(''),
+    seed4: new UntypedFormControl(''), seed5: new UntypedFormControl(''), seed6: new UntypedFormControl(''),
+    seed7: new UntypedFormControl(''), seed8: new UntypedFormControl(''), seed9: new UntypedFormControl(''),
+    seed10: new UntypedFormControl(''), seed11: new UntypedFormControl('')
   });
   seedObj = {} as Seed;
   addSeed() {

@@ -103,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "OnlinePlantNursury"
+  "cli": {
+    "analytics": false
+  }
 }
