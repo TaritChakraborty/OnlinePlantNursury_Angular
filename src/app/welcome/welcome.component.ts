@@ -8,14 +8,12 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
- 
-
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
     setTimeout(() => {
       this._router.navigate(['/customer']);
-  }, 5000);  //5s
+  }, 6000);  //5s
   }
 
 }
